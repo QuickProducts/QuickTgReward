@@ -2,10 +2,6 @@
   <img src="docs/assets/QuickTgReward.svg" alt="QuickTgReward Banner" width="100%">
 </p>
 
-<p align="center">
-  <img src="docs/assets/logo.svg" alt="Logo" width="80">
-</p>
-
 <h1 align="center">QuickTgReward</h1>
 
 <p align="center">
