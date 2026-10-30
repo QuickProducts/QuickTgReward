@@ -1,0 +1,23 @@
+# Оформление Minecraft-меню и кнопок
+
+colors:
+  primary: "#2563EB"
+  dark: "#0B1120"
+  accent: "#38BDF8"
+  white: "#F8FAFC"
+  gray: "#94A3B8"
+  success: "#22C55E"
+  error: "#EF4444"
+  warning: "#F59E0B"
+
+separators:
+  line: "<dark_gray>────────────────────────────────</dark_gray>"
+  thin: "<dark_gray>┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄</dark_gray>"
+
+menu:
+  spacing: true
+  use-gradients: true
+
+telegram-links:
+  bot: "https://t.me/{bot_username}"
+  channel: "https://t.me/{channel}"

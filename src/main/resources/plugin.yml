@@ -1,0 +1,52 @@
+name: QuickTgReward
+version: '${version}'
+main: com.quickproducts.qtgreward.QuickTgRewardPlugin
+api-version: '1.21'
+authors: [QuickProducts]
+description: Telegram Rewards system for Minecraft servers by QuickProducts
+website: https://github.com/QuickProducts/QuickTgReward
+softdepend: [Vault, LuckPerms, PlaceholderAPI]
+commands:
+  tg:
+    description: Main QuickTgReward command
+    usage: /tg [link|unlink|reward|status|help]
+    aliases: [telegram, tgreward]
+    permission: qtgreward.use
+  qtgreward:
+    description: Admin commands for QuickTgReward
+    usage: /qtgreward [reload|help|status|give|reset|unlink|check]
+    permission: qtgreward.admin
+permissions:
+  qtgreward.use:
+    description: Allows using basic /tg commands
+    default: true
+  qtgreward.link:
+    description: Allows linking Telegram account
+    default: true
+  qtgreward.unlink:
+    description: Allows unlinking own account
+    default: true
+  qtgreward.reward:
+    description: Allows claiming rewards
+    default: true
+  qtgreward.status:
+    description: Allows viewing status
+    default: true
+  qtgreward.admin:
+    description: Full admin access
+    default: op
+  qtgreward.admin.reload:
+    description: Reload configuration
+    default: op
+  qtgreward.admin.give:
+    description: Give rewards to players
+    default: op
+  qtgreward.admin.reset:
+    description: Reset player reward data
+    default: op
+  qtgreward.admin.unlink:
+    description: Force unlink players
+    default: op
+  qtgreward.admin.check:
+    description: Check player status
+    default: op

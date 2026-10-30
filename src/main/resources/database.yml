@@ -1,0 +1,19 @@
+type: sqlite
+
+sqlite:
+  file: "data/qtgreward.db"
+  # Полный путь относительно папки плагина
+
+pool:
+  maximum-pool-size: 10
+  minimum-idle: 2
+  connection-timeout: 30000
+  idle-timeout: 600000
+  max-lifetime: 1800000
+
+# Таблицы создаются автоматически
+tables:
+  players: "qtg_players"
+  codes: "qtg_codes"
+  rewards: "qtg_rewards"
+  attempts: "qtg_attempts"

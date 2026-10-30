@@ -1,0 +1,69 @@
+bot:
+  token: "YOUR_BOT_TOKEN_HERE"
+  username: "YourBotUsername"
+  enabled: true
+
+channel:
+  id: "@your_channel"
+  invite-link: "https://t.me/your_channel"
+  required: true
+
+messages:
+  start: |
+    <b>QuickTgReward</b>
+    
+    Добро пожаловать в систему наград!
+    
+    Подключите Minecraft-аккаунт, подпишитесь на наш Telegram-канал и получайте бонусы прямо на сервере.
+  help: |
+    <b>Помощь по QuickTgReward</b>
+    
+    /start — главное меню
+    /profile — ваш профиль
+    /help — эта справка
+    /unlink — отвязать аккаунт
+    
+    Для привязки используйте код с сервера Minecraft.
+  not-linked: "Ваш аккаунт не привязан. Получите код командой /tg link на сервере."
+  already-linked: "Этот Telegram уже привязан к другому Minecraft-аккаунту."
+  link-success: "✅ Аккаунт успешно привязан к <b>{player}</b>!"
+  link-failed: "❌ Неверный или просроченный код. Попробуйте снова."
+  not-subscribed: |
+    Вы не подписаны на наш канал.
+    
+    Подпишитесь и нажмите «Проверить подписку».
+  subscribed: "✅ Подписка подтверждена! Теперь вы можете получать награды."
+  reward-available: "🎁 Награда доступна! Нажмите кнопку ниже."
+  reward-cooldown: "⏳ Следующая награда через: <b>{time}</b>"
+  reward-success: "🎉 Награда выдана! Проверьте инвентарь на сервере."
+  reward-error: "❌ Не удалось выдать награду. Попробуйте позже."
+  profile: |
+    <b>👤 Ваш профиль</b>
+    
+    Minecraft: <code>{player}</code>
+    Статус: {status}
+    Подписка: {subscription}
+    Получено наград: <b>{rewards_count}</b>
+    Следующая награда: <b>{next_reward}</b>
+  unlink-success: "Аккаунт успешно отвязан."
+  error-generic: "Произошла ошибка. Попробуйте позже."
+  rate-limit: "Слишком много попыток. Подождите {seconds} секунд."
+
+buttons:
+  claim-reward: "🎁 Получить награду"
+  link-minecraft: "🔗 Привязать Minecraft"
+  my-profile: "👤 Мой профиль"
+  next-reward: "⏳ Следующая награда"
+  our-channel: "📢 Наш Telegram"
+  help: "❓ Помощь"
+  subscribe: "📢 Подписаться"
+  check-subscription: "✅ Проверить подписку"
+  back: "◀️ Назад"
+  unlink: "🔓 Отвязать аккаунт"
+  confirm-unlink: "✅ Да, отвязать"
+  cancel: "❌ Отмена"
+
+menu:
+  main-title: "QuickTgReward"
+  profile-title: "Профиль"
+  help-title: "Помощь"

@@ -1,0 +1,106 @@
+prefix: "<gradient:#2563EB:#38BDF8>QuickTgReward</gradient> <dark_gray>•</dark_gray> "
+
+menu:
+  header: |
+    <gradient:#2563EB:#38BDF8><bold>QuickTgReward</bold></gradient> <dark_gray>• Telegram Rewards</dark_gray>
+    
+    <gray>Статус аккаунта:</gray> {status}
+    <gray>Статус награды:</gray> {reward_status}
+    
+    {description}
+  linked-status: "<green>Привязан</green> <dark_gray>(</dark_gray><aqua>{telegram}</aqua><dark_gray>)</dark_gray>"
+  not-linked-status: "<red>Не привязан</red>"
+  reward-available: "<green>Доступна</green>"
+  reward-cooldown: "<yellow>Кулдаун: {time}</yellow>"
+  reward-need-link: "<gray>Доступна после привязки</gray>"
+  reward-need-sub: "<yellow>Требуется подписка</yellow>"
+  description-linked: "<gray>Подпишитесь на канал и получайте награды!</gray>"
+  description-not-linked: "<gray>Привяжите Telegram, подпишитесь на канал и получайте награды!</gray>"
+
+buttons:
+  link: "<aqua>[Привязать аккаунт]</aqua>"
+  open-telegram: "<blue>[Открыть Telegram]</blue>"
+  claim: "<green>[Получить награду]</green>"
+  status: "<yellow>[Статус]</yellow>"
+  help: "<gray>[Помощь]</gray>"
+  unlink: "<red>[Отвязать]</red>"
+  hover-link: "<gray>Нажмите, чтобы получить код привязки</gray>"
+  hover-telegram: "<gray>Открыть бота в Telegram</gray>"
+  hover-claim: "<gray>Получить доступную награду</gray>"
+  hover-status: "<gray>Подробный статус аккаунта</gray>"
+  hover-help: "<gray>Справка по командам</gray>"
+  hover-unlink: "<gray>Отвязать Telegram-аккаунт</gray>"
+
+link:
+  generated: |
+    <gradient:#2563EB:#38BDF8><bold>Код привязки</bold></gradient>
+    
+    <gray>Ваш одноразовый код:</gray>
+    <white><bold>{code}</bold></white>
+    
+    <gray>Срок действия:</gray> <yellow>{minutes} мин.</yellow>
+    
+    <dark_gray>1.</dark_gray> Откройте бота в Telegram
+    <dark_gray>2.</dark_gray> Нажмите «Привязать Minecraft»
+    <dark_gray>3.</dark_gray> Отправьте код боту
+  already-linked: "<red>Ваш аккаунт уже привязан.</red> Используйте /tg unlink для отвязки."
+  rate-limited: "<red>Подождите {seconds} секунд перед генерацией нового кода.</red>"
+  disabled: "<red>Система привязки временно отключена.</red>"
+
+unlink:
+  success: "<green>Аккаунт успешно отвязан от Telegram.</green>"
+  not-linked: "<yellow>Ваш аккаунт не привязан.</yellow>"
+  confirm: "<yellow>Вы уверены? Используйте /tg unlink confirm</yellow>"
+
+reward:
+  success: "<green>Награда успешно получена!</green>"
+  cooldown: "<yellow>Следующая награда через: <white>{time}</white></yellow>"
+  not-linked: "<red>Сначала привяжите Telegram-аккаунт: /tg link</red>"
+  not-subscribed: "<red>Подпишитесь на Telegram-канал для получения наград.</red>"
+  disabled: "<red>Система наград временно отключена.</red>"
+  already-claimed: "<yellow>Вы уже получили эту награду.</yellow>"
+  error: "<red>Ошибка при выдаче награды. Попробуйте позже.</red>"
+
+status:
+  header: "<gradient:#2563EB:#38BDF8><bold>Статус аккаунта</bold></gradient>"
+  player: "<gray>Игрок:</gray> <white>{player}</white>"
+  uuid: "<gray>UUID:</gray> <dark_gray>{uuid}</dark_gray>"
+  linked: "<gray>Telegram:</gray> {status}"
+  subscription: "<gray>Подписка:</gray> {status}"
+  rewards: "<gray>Получено наград:</gray> <aqua>{count}</aqua>"
+  next: "<gray>Следующая награда:</gray> <yellow>{time}</yellow>"
+  never: "никогда"
+  available-now: "<green>сейчас</green>"
+
+help:
+  header: "<gradient:#2563EB:#38BDF8><bold>Помощь</bold></gradient>"
+  lines:
+    - "<aqua>/tg</aqua> <dark_gray>—</dark_gray> <gray>главное меню</gray>"
+    - "<aqua>/tg link</aqua> <dark_gray>—</dark_gray> <gray>привязать Telegram</gray>"
+    - "<aqua>/tg unlink</aqua> <dark_gray>—</dark_gray> <gray>отвязать аккаунт</gray>"
+    - "<aqua>/tg reward</aqua> <dark_gray>—</dark_gray> <gray>получить награду</gray>"
+    - "<aqua>/tg status</aqua> <dark_gray>—</dark_gray> <gray>статус аккаунта</gray>"
+    - "<aqua>/tg help</aqua> <dark_gray>—</dark_gray> <gray>эта справка</gray>"
+
+admin:
+  reload-success: "<green>Конфигурация успешно перезагружена.</green>"
+  reload-error: "<red>Ошибка при перезагрузке: {error}</red>"
+  player-not-found: "<red>Игрок не найден.</red>"
+  give-success: "<green>Награда {reward} выдана игроку {player}.</green>"
+  reset-success: "<green>Данные игрока {player} сброшены.</green>"
+  unlink-success: "<green>Аккаунт {player} отвязан.</green>"
+  check-header: "<gradient:#2563EB:#38BDF8>Проверка {player}</gradient>"
+  no-permission: "<red>Недостаточно прав.</red>"
+  status-online: "<green>Бот онлайн</green>"
+  status-offline: "<red>Бот оффлайн</red>"
+
+errors:
+  generic: "<red>Произошла внутренняя ошибка.</red>"
+  database: "<red>Ошибка базы данных.</red>"
+  telegram: "<red>Ошибка связи с Telegram.</red>"
+  invalid-args: "<red>Неверные аргументы команды.</red>"
+
+actionbar:
+  reward-claimed: "<green>Награда получена!</green>"
+  linked: "<aqua>Telegram привязан!</aqua>"
+  unlinked: "<yellow>Telegram отвязан</yellow>"

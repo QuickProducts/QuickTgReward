@@ -1,0 +1,84 @@
+# Список наград. Игрок получает одну из доступных наград по кулдауну.
+# Типы: COMMAND, ITEM, MONEY, EXP, PERMISSION, RANDOM
+
+rewards:
+  weekly:
+    enabled: true
+    display-name: "Еженедельная награда"
+    cooldown: 604800  # 7 дней в секундах
+    one-time: false
+    require-subscription: true
+    messages:
+      success: "<green>Вы получили еженедельную награду!</green>"
+      telegram: "🎁 Еженедельная награда выдана на сервере!"
+    actions:
+      - type: COMMAND
+        commands:
+          - "give {player} diamond 5"
+          - "give {player} emerald 3"
+        run-as-console: true
+      - type: EXP
+        amount: 500
+      - type: MONEY
+        amount: 1000.0
+        # Требует Vault
+
+  daily:
+    enabled: false
+    display-name: "Ежедневная награда"
+    cooldown: 86400
+    one-time: false
+    require-subscription: true
+    actions:
+      - type: COMMAND
+        commands:
+          - "give {player} cooked_beef 16"
+        run-as-console: true
+      - type: EXP
+        amount: 100
+
+  welcome:
+    enabled: true
+    display-name: "Приветственная награда"
+    cooldown: 0
+    one-time: true
+    require-subscription: false
+    actions:
+      - type: COMMAND
+        commands:
+          - "give {player} iron_ingot 16"
+          - "give {player} bread 32"
+        run-as-console: true
+      - type: EXP
+        amount: 200
+
+  random-box:
+    enabled: false
+    display-name: "Случайный сундук"
+    cooldown: 259200
+    one-time: false
+    require-subscription: true
+    actions:
+      - type: RANDOM
+        options:
+          - weight: 50
+            actions:
+              - type: ITEM
+                material: DIAMOND
+                amount: 3
+                name: "<aqua>Алмаз удачи</aqua>"
+          - weight: 30
+            actions:
+              - type: ITEM
+                material: EMERALD
+                amount: 5
+          - weight: 15
+            actions:
+              - type: MONEY
+                amount: 5000
+          - weight: 5
+            actions:
+              - type: PERMISSION
+                permission: "vip.temp"
+                duration: 86400  # секунды, требует LuckPerms
+                # или permanent: true

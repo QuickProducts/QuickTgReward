@@ -1,0 +1,36 @@
+plugin:
+  prefix: "<gradient:#2563EB:#38BDF8>QuickTgReward</gradient>"
+  language: ru
+  debug: false
+  check-updates: true
+
+linking:
+  enabled: true
+  code-length: 8
+  code-expiration: 300
+  max-attempts: 5
+  one-telegram-per-player: true
+  one-player-per-telegram: true
+  rate-limit-seconds: 30
+
+rewards:
+  enabled: true
+  default-cooldown: 604800
+  require-subscription: true
+  require-linked-account: true
+
+notifications:
+  minecraft: true
+  telegram: true
+  sounds: true
+  actionbar: true
+
+sounds:
+  success: "ENTITY_PLAYER_LEVELUP"
+  error: "ENTITY_VILLAGER_NO"
+  link: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  reward: "UI_TOAST_CHALLENGE_COMPLETE"
+
+update:
+  check-url: "https://api.github.com/repos/QuickProducts/QuickTgReward/releases/latest"
+  notify-ops: true
